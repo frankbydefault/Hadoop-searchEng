@@ -16,18 +16,19 @@ count = 0
 for t in data:
         page_py = wiki_wiki.page(t['title'])
 
-        if not os.path.exists("./carpeta1"):
-                os.makedirs("./carpeta1")
+        if not os.path.exists("./wiki/carpeta1"):
+                os.makedirs("./wiki/carpeta1")
 
-        if not os.path.exists("./carpeta2"):
-                os.makedirs("./carpeta2")
+        if not os.path.exists("./wiki/carpeta2"):
+                os.makedirs("./wiki/carpeta2")
 
 
-        if count <5:
-                text_file = open("./carpeta1/"+t['title']+".txt", "w")
+        if count < 5:
+                text_file = open("./wiki/carpeta1/Documento"+ str(count+1) +".txt", "w")
                 count += 1
         else:
-                text_file = open("./carpeta2/"+t['title']+".txt", "w")
+                text_file = open("./wiki/carpeta2/+Documento"+ str(count+1) +".txt", "w")
+                count += 1
 
         text_file.write(page_py.text)
         text_file.close()
