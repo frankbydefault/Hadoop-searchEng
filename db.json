@@ -1,0 +1,50 @@
+{
+  "Joseph": [
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 9],
+    ["https://en.wikipedia.org/wiki/Abhim%C4%81na", 2],
+    ["https://en.wikipedia.org/wiki/Rhein-Hunsr%C3%BCck-Kreis", 2]
+  ],
+  "Taylor": [
+    ["https://en.wikipedia.org/wiki/Abhim%C4%81na", 2],
+    ["https://en.wikipedia.org/wiki/Rhein-Hunsr%C3%BCck-Kreis", 2]
+  ],
+  "Gilman": [
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 2]
+  ],
+  "October": [["https://en.wikipedia.org/wiki/Abhim%C4%81na", 2]],
+  "4": [
+    ["https://en.wikipedia.org/wiki/Abhim%C4%81na", 7],
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 6]
+  ],
+  "1883": [["https://en.wikipedia.org/wiki/Rhein-Hunsr%C3%BCck-Kreis", 2]],
+  "September": [
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 8],
+    ["https://en.wikipedia.org/wiki/Mount_Oizuru", 6],
+    ["https://en.wikipedia.org/wiki/Rhein-Hunsr%C3%BCck-Kreis", 2]
+  ],
+  "15": [
+    ["https://en.wikipedia.org/wiki/Abhim%C4%81na", 2],
+    ["https://en.wikipedia.org/wiki/Rhein-Hunsr%C3%BCck-Kreis", 2],
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 2]
+  ],
+  "1933": [
+    ["https://en.wikipedia.org/wiki/Abhim%C4%81na", 2],
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 2]
+  ],
+  "was": [
+    ["https://en.wikipedia.org/wiki/Rhein-Hunsr%C3%BCck-Kreis", 2],
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 2]
+  ],
+  "an": [["https://en.wikipedia.org/wiki/Abhim%C4%81na", 9]],
+  "American": [
+    ["https://en.wikipedia.org/wiki/Mount_Oizuru", 5],
+    ["https://en.wikipedia.org/wiki/Abhim%C4%81na", 4],
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 2]
+  ],
+  "football": [
+    ["https://en.wikipedia.org/wiki/Rhein-Hunsr%C3%BCck-Kreis", 7],
+    ["https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire", 2],
+    ["https://en.wikipedia.org/wiki/Abhim%C4%81na", 1]
+  ],
+  "player": [["https://en.wikipedia.org/wiki/Abhim%C4%81na", 2]]
+}
