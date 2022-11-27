@@ -6,7 +6,10 @@ import os
 limit = 10
 response = requests.get(f"https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnlimit={limit}").json()
 data = response["query"]["random"]
-size = os.get_terminal_size()[0]
+try:
+        size = os.get_terminal_size()[0]
+except OSError:
+        size = 40
 
 wiki_wiki = wikipediaapi.Wikipedia(
         language='en',
@@ -25,10 +28,10 @@ for t in data:
         if not os.path.exists("./wiki/carpeta2"):
                 os.makedirs("./wiki/carpeta2")
 
-        text_file = open(f"./wiki/carpeta{1 if count < 5 else 2}/Documento{count+1}.txt", "w")
-        count += 1
+        with open(f"./wiki/carpeta{1 if count < 5 else 2}/Documento{count+1}.txt", "w") as f:
+                f.write(page_py.fullurl + '\n')
+                count += 1
+                f.write(page_py.text)
 
-        text_file.write(page_py.text)
-        text_file.close()
         print(f"[{'='* (c :=(((size - 8) // limit) * count))}>{' '*(size - c - 8)}] {' '*(3 - len(str(count * 100 // limit)))}{count * 100 // limit}%", end="\r")
 print(f"[{'='*(size-7)}] 100%")

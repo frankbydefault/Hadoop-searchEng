@@ -2,7 +2,9 @@ import sys
 import re
 
 for line in sys.stdin:
-    line = re.sub(r'\W+',' ',line.strip())
+    if line.startswith("https://"):
+        continue
+    line = re.sub(r'(\W|https:\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-]))+',' ',line.strip())
     words = line.split()
 
     for word in words:
