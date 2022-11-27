@@ -14,7 +14,7 @@ wiki_wiki = wikipediaapi.Wikipedia(
 )
 
 count = 0
-print(f"[{' '*(size-2)}]", end="\r")
+print(f"[{' '*(size-7)}]   0%", end="\r")
 #fetching the articles and making the txts
 for t in data:
         page_py = wiki_wiki.page(t['title'])
@@ -30,5 +30,5 @@ for t in data:
 
         text_file.write(page_py.text)
         text_file.close()
-        print(f"[{'='* (c :=(((size - 3) // limit) * count))}>{' '*(size - c - 3)}]", end="\r")
-print(f"[{'='*(size-2)}]")
+        print(f"[{'='* (c :=(((size - 8) // limit) * count))}>{' '*(size - c - 8)}] {' '*(3 - len(str(count * 100 // limit)))}{count * 100 // limit}%", end="\r")
+print(f"[{'='*(size-7)}] 100%")
