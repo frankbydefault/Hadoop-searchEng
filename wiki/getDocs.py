@@ -12,6 +12,7 @@ wiki_wiki = wikipediaapi.Wikipedia(
 )
 
 count = 0
+print(f"[{'=='*count}>{'  '*(10 - count)}]", end="\r")
 #fetching the articles and making the txts
 for t in data:
         page_py = wiki_wiki.page(t['title'])
@@ -27,3 +28,5 @@ for t in data:
 
         text_file.write(page_py.text)
         text_file.close()
+        print(f"[{'=='*count}>{'  '*(10 - count)}]", end="\r")
+print(f"[{'=='*(count+1)}]")
