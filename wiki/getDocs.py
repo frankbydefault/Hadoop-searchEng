@@ -22,13 +22,8 @@ for t in data:
         if not os.path.exists("./wiki/carpeta2"):
                 os.makedirs("./wiki/carpeta2")
 
-
-        if count < 5:
-                text_file = open("./wiki/carpeta1/Documento"+ str(count+1) +".txt", "w")
-                count += 1
-        else:
-                text_file = open("./wiki/carpeta2/+Documento"+ str(count+1) +".txt", "w")
-                count += 1
+        text_file = open(f"./wiki/carpeta{1 if count < 5 else 2}/Documento{count+1}.txt", "w")
+        count += 1
 
         text_file.write(page_py.text)
         text_file.close()
