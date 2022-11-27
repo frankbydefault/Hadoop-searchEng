@@ -3,8 +3,10 @@ import requests
 import os
 #Getting random titles from wikipedia
 
-response = requests.get("https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnlimit=10").json()
+limit = 10
+response = requests.get(f"https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnlimit={limit}").json()
 data = response["query"]["random"]
+size = os.get_terminal_size()[0]
 
 wiki_wiki = wikipediaapi.Wikipedia(
         language='en',
@@ -12,7 +14,7 @@ wiki_wiki = wikipediaapi.Wikipedia(
 )
 
 count = 0
-print(f"[{'=='*count}>{'  '*(10 - count)}]", end="\r")
+print(f"[{' '*(size-2)}]", end="\r")
 #fetching the articles and making the txts
 for t in data:
         page_py = wiki_wiki.page(t['title'])
@@ -28,5 +30,5 @@ for t in data:
 
         text_file.write(page_py.text)
         text_file.close()
-        print(f"[{'=='*count}>{'  '*(10 - count)}]", end="\r")
-print(f"[{'=='*(count+1)}]")
+        print(f"[{'='* (c :=(((size - 3) // limit) * count))}>{' '*(size - c - 3)}]", end="\r")
+print(f"[{'='*(size-2)}]")
