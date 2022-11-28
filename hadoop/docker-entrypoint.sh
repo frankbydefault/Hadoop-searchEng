@@ -23,5 +23,8 @@ $HADOOP_HOME/bin/hdfs dfs -chmod 777 /jars
 
 $HADOOP_HOME/bin/hdfs dfsadmin -safemode leave
 
+sudo chmod 777 ~/wiki
+sudo chmod 777 ~/wiki/*
+
 # keep the container running indefinitely
 tail -f $HADOOP_HOME/logs/hadoop-*-namenode-*.log
