@@ -1,5 +1,35 @@
 version: '3.7'
+
+networks:
+  hadoop_t3:
+    driver: bridge
+
 services:
+  hadoop:
+    build: hadoop
+    container_name: hadoop
+    networks:
+      - hadoop_t3
+    ports:
+      - "50070:50070"
+      - "50075:50075"
+      - "50010:50010"
+      - "50020:50020"
+      - "50090:50090"
+      - "8020:8020"
+      - "9000:9000"
+      - "9864:9864"
+      - "9870:9870"
+      - "10020:10020"
+      - "19888:19888"
+      - "8088:8088"
+      - "8030:8030"
+      - "8031:8031"
+      - "8032:8032"
+      - "8033:8033"
+      - "8040:8040"
+      - "8042:8042"
+      - "22:22"
   mongodb_container:
     image: mongo:latest
     environment:
@@ -10,6 +40,8 @@ services:
     volumes:
       - mongodb_data_container:/data/db
     container_name: mongo
+    networks:
+      - hadoop_t3
 
 volumes:
   mongodb_data_container:

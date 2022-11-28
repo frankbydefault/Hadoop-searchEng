@@ -22,13 +22,13 @@ print(f"[{' '*(size-7)}]   0%", end="\r")
 for t in data:
         page_py = wiki_wiki.page(t['title'])
 
-        if not os.path.exists("./wiki/carpeta1"):
-                os.makedirs("./wiki/carpeta1")
+        if not os.path.exists("./hadoop/wiki/carpeta1"):
+                os.makedirs("./hadoop/wiki/carpeta1")
 
-        if not os.path.exists("./wiki/carpeta2"):
-                os.makedirs("./wiki/carpeta2")
+        if not os.path.exists("./wiki/hadoop/carpeta2"):
+                os.makedirs("./wiki/hadoop/carpeta2")
 
-        with open(f"./wiki/carpeta{1 if count < 5 else 2}/Documento{count+1}.txt", "w") as f:
+        with open(f"./hadoop/wiki/carpeta{1 if count < 5 else 2}/Documento{count+1}.txt", "w") as f:
                 f.write(page_py.fullurl + '\n')
                 count += 1
                 f.write(page_py.text)
