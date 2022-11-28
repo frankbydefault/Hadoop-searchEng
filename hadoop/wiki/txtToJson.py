@@ -10,7 +10,7 @@ def getURL(numdoc):
 file_content = {}
 with open("output.txt","r") as f:
     for line in f:
-        word, count = line.strip().split(" ", maxsplit=1) 
+        word, count = line.strip().split("\t") 
         count = count.split("(")[1:]
 
         for i,c in enumerate(count):
