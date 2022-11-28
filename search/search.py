@@ -8,8 +8,10 @@ if __name__ == '__main__':
 
     print("Connection Succesfull")
 
+print("----- Escribir .exit para salir -----\n")
+
 while True:
-    print("----- Escribir .exit para salir -----")
+    
     word = input("search > ")
 
     if word== ".exit":
@@ -19,7 +21,7 @@ while True:
 
     try:
         for document in cursor:
-            print([url[0] for url in document[word]])
+            print([('{} ,veces: {}\n'.format(url[0],url[1])) for url in document[word]])
 
     except:
         print('No hay resultados')
