@@ -17,11 +17,15 @@ while True:
     if word== ".exit":
         break
 
-    cursor = collection.find({},{word:1})
+    cursor = collection.find({ },{word:1})
 
     try:
         for document in cursor:
-            print([('{} ,veces: {}\n'.format(url[0],url[1])) for url in document[word]])
+            try:
+                print([('{} ,veces: {}\n'.format(url[0],url[1])) for url in document[word]])
+            
+            except:
+                continue
 
     except:
         print('No hay resultados')
