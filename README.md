@@ -2,18 +2,18 @@
 
 ## Setting Dockers
 ```
-make
+# make
 ```
 ## Delete dockers
 ```
-make clean
+# make clean
 ```
 ## How to Search
 
 Inside Dockers terminal:
 
 ```
-$ python search/search.py
+# python search/search.py
 ```
 
 ```
