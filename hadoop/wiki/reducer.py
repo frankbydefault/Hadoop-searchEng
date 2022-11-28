@@ -4,11 +4,12 @@ import sys
 current_word = None
 current_count = 0
 word = None
-
+doscnum=None
+# word (doc,val)
 for line in sys.stdin:
     line = line.strip()
-    word, count = line.split('\t',1)
-
+    word, docnum, count = line.split('\t',3)
+    
     try:
         count = int(count)
     except ValueError:
