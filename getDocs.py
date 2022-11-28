@@ -25,8 +25,8 @@ for t in data:
         if not os.path.exists("./hadoop/wiki/carpeta1"):
                 os.makedirs("./hadoop/wiki/carpeta1")
 
-        if not os.path.exists("./wiki/hadoop/carpeta2"):
-                os.makedirs("./wiki/hadoop/carpeta2")
+        if not os.path.exists("./hadoop/wiki/carpeta2"):
+                os.makedirs("./hadoop/wiki/carpeta2")
 
         with open(f"./hadoop/wiki/carpeta{1 if count < 5 else 2}/Documento{count+1}.txt", "w") as f:
                 f.write(page_py.fullurl + '\n')

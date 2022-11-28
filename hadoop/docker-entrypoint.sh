@@ -1,10 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 set -e
-
-sudo mkdir /run/openrc
-sudo touch /run/openrc/softlevel
-sudo rc-status
-sudo rc-service sshd start
+sudo service ssh start
 
 if [ ! -d "/tmp/hadoop-hduser/dfs/name" ]; then
         $HADOOP_HOME/bin/hdfs namenode -format && echo "OK : HDFS namenode format operation finished successfully !"
