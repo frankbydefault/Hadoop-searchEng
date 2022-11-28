@@ -1,5 +1,10 @@
 # Hadoop-searchEng
 
+## Pre-requisites
+```bash
+pip install -r requirements.txt
+```
+
 ## Setting Dockers
 ```
 # make
@@ -10,19 +15,27 @@
 ```
 ## How to Search
 
-Inside Dockers terminal:
+Inside terminal:
 
 ```
-# python search/search.py
+# python3 search/search.py
 ```
 
 ```
 ----- Escribir .exit para salir -----
 
-search > Joseph
-['https://en.wikipedia.org/wiki/There%27s_No_Smoke_Without_Fire ,veces: 9', 'https://en.wikipedia.org/wiki/Abhim%C4%81na ,veces: 5', 'https://en.wikipedia.org/wiki/Rhein-Hunsr%C3%BCck-Kreis ,veces: 3']
+search > year
+https://en.wikipedia.org/wiki/2003_Idea_Prokom_Open, 6 veces
+https://en.wikipedia.org/wiki/Isla_Cameron, 4 veces
+https://en.wikipedia.org/wiki/1998_in_association_football, 1 veces
+https://en.wikipedia.org/wiki/Kim_Dracula, 1 veces
+
 
 search > sdjck
 No hay resultados
 
 ```
+
+## Links
+[GitHub](https://github.com/frankbydefault/Hadoop-searchEng)  
+[Video](https://youtu.be/wSYh5nEuqMo)

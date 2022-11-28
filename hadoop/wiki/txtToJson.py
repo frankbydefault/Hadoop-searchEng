@@ -3,7 +3,7 @@ import json
 
 def getURL(numdoc):
     with open(f"wiki/carpeta{1 if numdoc < 6 else 2}/Documento{numdoc}.txt", "r") as f:
-        URL= f.readline().strip()
+        URL= f.readline().strip().split('\t')[0]
 
     return URL 
 

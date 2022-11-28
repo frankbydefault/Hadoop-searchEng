@@ -21,11 +21,7 @@ while True:
 
     try:
         for document in cursor:
-            try:
-                print([('{} ,veces: {}\n'.format(url[0],url[1])) for url in document[word]])
-            
-            except:
-                continue
+                print("".join([('{}, {} veces\n'.format(url[0],url[1])) for url in document[word]]))
 
-    except:
+    except KeyError:
         print('No hay resultados')

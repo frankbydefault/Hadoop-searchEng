@@ -14,4 +14,5 @@ docker exec -it hadoop mv wiki/txtToJson.py .
 docker exec -it hadoop python txtToJson.py
 docker cp hadoop:/home/hduser/db.json ./
 docker cp ./db.json mongo:/
+rm -f ./db.json
 docker exec -it mongo mongoimport -u root -p rootpassword --db data --collection words --file db.json --authenticationDatabase admin --port 27017

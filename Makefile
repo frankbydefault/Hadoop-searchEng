@@ -1,5 +1,5 @@
 all:
-	docker compose up -d && chmod +x execute_dockers.sh && ./execute_dockers.sh
+	docker compose up -d && chmod +x execute_dockers.sh && ./execute_dockers.sh && clear && echo "Done!"
 
 clean:
 	docker compose stop
