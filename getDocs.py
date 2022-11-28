@@ -29,9 +29,8 @@ for t in data:
                 os.makedirs("./hadoop/wiki/carpeta2")
 
         with open(f"./hadoop/wiki/carpeta{1 if count < 5 else 2}/Documento{count+1}.txt", "w") as f:
-                f.write(page_py.fullurl + '\n')
+                f.write(page_py.fullurl + '\t'+ str(count+1) +'\n')
                 count += 1
-                f.write("-- "+ str(count) + '\n')
                 f.write(page_py.text)
 
         print(f"[{'='* (c :=(((size - 8) // limit) * count))}>{' '*(size - c - 8)}] {' '*(3 - len(str(count * 100 // limit)))}{count * 100 // limit}%", end="\r")
