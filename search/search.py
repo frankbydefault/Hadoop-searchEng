@@ -8,10 +8,18 @@ if __name__ == '__main__':
 
     print("Connection Succesfull")
 
-print('Escriba la palabra que quiere buscar:\n')
-word = input()
+while True:
+    print("----- Escribir .exit para salir -----")
+    word = input("search > ")
 
-cursor = collection.find({},{word:1})
+    if word== ".exit":
+        break
 
-for document in cursor:
-    print(document)
+    cursor = collection.find({},{word:1})
+
+    try:
+        for document in cursor:
+            print([url[0] for url in document[word]])
+
+    except:
+        print('No hay resultados')
